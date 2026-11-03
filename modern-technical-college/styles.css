@@ -1,0 +1,159 @@
+/* ==================================================
+   1. การตั้งค่าพื้นฐานของเว็บไซต์
+   ================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f7fafc;
+}
+
+/* ==================================================
+   2. การแสดงผลและแอนิเมชันของแต่ละหน้า
+   ================================================== */
+.page {
+  display: none;
+  animation: reveal 0.45s ease both;
+}
+
+.page.active {
+  display: block;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ==================================================
+   3. พื้นหลังของส่วน Hero
+   ================================================== */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.orb::before,
+.orb::after {
+  content: '';
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(2px);
+}
+
+.orb::before {
+  width: 260px;
+  height: 260px;
+  right: -100px;
+  top: -100px;
+  background: rgba(243, 167, 18, 0.22);
+}
+
+.orb::after {
+  width: 180px;
+  height: 180px;
+  left: -70px;
+  bottom: -80px;
+  background: rgba(70, 176, 235, 0.16);
+}
+
+/* ==================================================
+   4. เมนูหลักและการ์ด
+   ================================================== */
+.nav-link.active {
+  color: #f3a712;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.menu-icon {
+  transition: transform 0.25s ease;
+}
+
+.menu-card:hover .menu-icon {
+  transform: rotate(-5deg) scale(1.08);
+}
+
+.photo-overlay {
+  background: linear-gradient(180deg, transparent 40%, rgba(10, 36, 62, 0.9));
+}
+
+/* ==================================================
+   5. การรองรับผู้ใช้ที่ลดการเคลื่อนไหว
+   ================================================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* การตกแต่งเมนูเพิ่มเติม */
+
+.menu-card {
+    transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(10, 36, 62, 0.12);
+}
+
+.menu-card i {
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover i {
+    transform: scale(1.1);
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+}
+/* การตกแต่งเมนูเพิ่มเติม */
+
+.menu-card {
+    transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(10, 36, 62, 0.12);
+}
+
+.menu-card i {
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover i {
+    transform: scale(1.1);
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+}

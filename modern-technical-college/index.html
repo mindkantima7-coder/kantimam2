@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="เว็บไซต์แนะนำวิทยาลัยเทคนิคนางรอง ข้อมูลวิทยาลัย แผนที่การเดินทาง และข้อมูลติดต่อ" />
+  <title>วิทยาลัยเทคนิคนางรอง | Nangrong Technical College</title>
+
+  <!-- ส่วนที่ 1: ไลบรารีและการตั้งค่า Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/tailwind-config.js"></script>
+
+  <!-- ส่วนที่ 2: ฟอนต์ ไอคอน และ CSS ของเว็บไซต์ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="font-sans text-ink antialiased">
+<!-- ส่วนที่ 3: แถบเมนูด้านบน -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-ink/95 text-white backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 lg:px-8">
+      <button onclick="location.href='index.html'" class="flex items-center gap-3 text-left" aria-label="กลับหน้าแรก">
+        <span class="grid h-11 w-11 place-items-center rounded-2xl bg-sun text-ink shadow-lg shadow-sun/20">
+          <i data-lucide="graduation-cap" class="h-6 w-6"></i>
+        </span>
+        <span>
+          <span class="block text-sm font-bold leading-tight sm:text-base">วิทยาลัยเทคนิคนางรอง</span>
+          <span class="block text-[10px] uppercase tracking-[.18em] text-slate-300 sm:text-xs">Nangrong Technical College</span>
+        </span>
+      </button>
+
+      <nav class="hidden items-center gap-1 lg:flex" aria-label="เมนูหลัก">
+        <button data-nav="home" onclick="location.href='index.html'" class="nav-link active rounded-xl px-4 py-2 text-sm font-semibold transition hover:bg-white/10">หน้าแรก</button>
+        <button data-nav="about" onclick="location.href='about.html'" class="nav-link rounded-xl px-4 py-2 text-sm font-semibold transition hover:bg-white/10">เกี่ยวกับวิทยาลัย</button>
+        <button data-nav="map" onclick="location.href='map.html'" class="nav-link rounded-xl px-4 py-2 text-sm font-semibold transition hover:bg-white/10">แผนที่</button>
+        <button data-nav="contact" onclick="location.href='contact.html'" class="nav-link rounded-xl px-4 py-2 text-sm font-semibold transition hover:bg-white/10">ติดต่อเรา</button>
+        <a href="service.html" class="nav-link rounded-xl px-3 py-2 text-sm font-semibold hover:bg-white/10">หมวดหมู่สถานที่</a>
+
+<a href="detail.html" class="nav-link rounded-xl px-3 py-2 text-sm font-semibold hover:bg-white/10">ลายละเอียดสถานที่</a>
+
+<a href="building.html" class="nav-link rounded-xl px-3 py-2 text-sm font-semibold hover:bg-white/10">ทำเนียบอาคาร</a>
+
+<a href="department.html" class="nav-link rounded-xl px-3 py-2 text-sm font-semibold hover:bg-white/10">แผนกวิชา</a>
+
+<a href="facilities.html" class="nav-link rounded-xl px-3 py-2 text-sm font-semibold hover:bg-white/10">สิ่งอำนวยความสะดวก</a>
+
+<a href="gallery.html" class="nav-link rounded-xl px-3 py-2 text-sm font-semibold hover:bg-white/10">ภาพกิจกรรมและสถานที่</a>
+      </nav>
+
+      <button id="mobile-menu-button" class="grid h-11 w-11 place-items-center rounded-xl bg-white/10 lg:hidden" aria-label="เปิดเมนู" aria-expanded="false">
+        <i data-lucide="menu" class="h-6 w-6"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden border-t border-white/10 px-5 py-4 lg:hidden">
+      <div class="grid gap-2">
+        <button onclick="location.href='index.html'" class="rounded-xl px-4 py-3 text-left font-semibold hover:bg-white/10">หน้าแรก</button>
+        <button onclick="location.href='about.html'" class="rounded-xl px-4 py-3 text-left font-semibold hover:bg-white/10">รายละเอียดเกี่ยวกับวิทยาลัย</button>
+        <button onclick="location.href='map.html'" class="rounded-xl px-4 py-3 text-left font-semibold hover:bg-white/10">แผนที่และการเดินทาง</button>
+        <button onclick="location.href='contact.html'" class="rounded-xl px-4 py-3 text-left font-semibold hover:bg-white/10">ข้อมูลติดต่อวิทยาลัย</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ส่วนที่ 4: หน้าแรก -->
+    <section id="home" class="page active">
+      <div class="orb grid-pattern relative isolate overflow-hidden bg-ink text-white">
+        <div class="relative mx-auto grid min-h-[620px] max-w-7xl items-center gap-12 px-5 py-20 lg:grid-cols-[1.05fr_.95fr] lg:px-8 lg:py-24">
+          <div class="relative z-10">
+            <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-slate-100 backdrop-blur">
+              <span class="h-2 w-2 rounded-full bg-sun"></span>
+              สร้างทักษะจริง สู่อาชีพที่มั่นคง
+            </div>
+            <p class="mb-3 text-sm font-bold uppercase tracking-[.22em] text-sun">Welcome to NRTC</p>
+            <h1 class="max-w-3xl text-4xl font-extrabold leading-[1.15] sm:text-5xl lg:text-6xl">
+              วิทยาลัยเทคนิค<span class="text-sun">นางรอง</span>
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg font-light leading-8 text-slate-200 sm:text-xl">
+              พื้นที่แห่งการเรียนรู้ด้านวิชาชีพที่เชื่อมโยงความรู้ ทักษะปฏิบัติ และประสบการณ์จริง เพื่อเตรียมผู้เรียนให้พร้อมก้าวสู่โลกการทำงาน
+            </p>
+            <div class="mt-9 flex flex-wrap gap-3">
+              <button onclick="location.href='about.html'" class="inline-flex items-center gap-2 rounded-2xl bg-sun px-6 py-3.5 font-bold text-ink shadow-lg shadow-sun/20 transition hover:-translate-y-1 hover:bg-amber-400">
+                รู้จักวิทยาลัย <i data-lucide="arrow-right" class="h-5 w-5"></i>
+              </button>
+              <button onclick="location.href='map.html'" class="inline-flex items-center gap-2 rounded-2xl border border-white/20 bg-white/10 px-6 py-3.5 font-bold text-white backdrop-blur transition hover:-translate-y-1 hover:bg-white/15">
+                <i data-lucide="map-pin" class="h-5 w-5"></i> ดูแผนที่
+              </button>
+            </div>
+          </div>
+
+          <div class="relative z-10 mx-auto w-full max-w-xl">
+            <div class="relative overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 p-3 shadow-2xl backdrop-blur">
+              <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1200&q=85" alt="นักศึกษาฝึกทักษะด้านเทคนิคในห้องปฏิบัติการ" class="h-[410px] w-full rounded-[1.5rem] object-cover" />
+              <div class="absolute inset-x-7 bottom-7 rounded-2xl border border-white/20 bg-ink/80 p-5 backdrop-blur-md">
+                <div class="flex items-center gap-4">
+                  <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-sun text-ink"><i data-lucide="wrench" class="h-6 w-6"></i></span>
+                  <div><p class="font-bold">เรียนรู้จากการลงมือทำ</p><p class="mt-1 text-sm text-slate-300">พัฒนาทักษะวิชาชีพผ่านการฝึกปฏิบัติ</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="relative -mt-10 px-5 pb-20 lg:px-8">
+        <div class="mx-auto max-w-7xl rounded-[2rem] bg-skysoft px-5 py-14 shadow-soft sm:px-8 lg:px-12">
+          <div class="mx-auto max-w-2xl text-center">
+            <span class="text-sm font-bold uppercase tracking-[.2em] text-royal">เมนูหลัก</span>
+            <h2 class="mt-2 text-3xl font-extrabold sm:text-4xl">เลือกหัวข้อที่ต้องการเข้าชม</h2>
+            <p class="mt-3 text-slate-600">ข้อมูลสำคัญของวิทยาลัยถูกรวบรวมไว้ให้เข้าถึงได้ง่ายในทุกอุปกรณ์</p>
+          </div>
+          <div class="mt-10 grid gap-5 md:grid-cols-3">
+    <button onclick="location.href='about.html'" class="menu-card group rounded-3xl border border-slate-200/70 bg-white p-7 text-left shadow-sm transition duration-300 hover:-translate-y-2 hover:border-royal/20 hover:shadow-lift">
+        <span class="menu-icon mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-blue-100 text-royal">
+            <i data-lucide="landmark" class="h-7 w-7"></i>
+        </span>
+        <h3 class="text-xl font-extrabold">รายละเอียดเกี่ยวกับวิทยาลัย</h3>
+        <p class="mt-3 min-h-12 leading-7 text-slate-600">ทำความรู้จักประวัติ ความเป็นมา และข้อมูลทั่วไปของวิทยาลัย</p>
+        <span class="mt-6 inline-flex items-center gap-2 font-bold text-royal">
+            ดูรายละเอียด <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+        </span>
+    </button>
+
+    <!-- Service -->
+    <button onclick="location.href='service.html'" class="menu-card group rounded-3xl border border-slate-200/70 bg-white p-7 text-left shadow-sm transition duration-300 hover:-translate-y-2 hover:border-emerald-300 hover:shadow-lift">
+        <span class="menu-icon mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-emerald-100 text-emerald-700">
+            <i data-lucide="layers" class="h-7 w-7"></i>
+        </span>
+        <h3 class="text-xl font-extrabold">หมวดหมู่สถานที่</h3>
+        <p class="mt-3 min-h-12 leading-7 text-slate-600">เลือกชมหมวดหมู่สถานที่และพื้นที่ต่าง ๆ ภายในวิทยาลัย</p>
+        <span class="mt-6 inline-flex items-center gap-2 font-bold text-emerald-700">
+            ดูหมวดหมู่ <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+        </span>
+    </button>
+
+    <!-- Detail -->
+    <button onclick="location.href='detail.html'" class="menu-card group rounded-3xl border border-slate-200/70 bg-white p-7 text-left shadow-sm transition duration-300 hover:-translate-y-2 hover:border-violet-300 hover:shadow-lift">
+        <span class="menu-icon mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-violet-100 text-violet-700">
+            <i data-lucide="info" class="h-7 w-7"></i>
+        </span>
+        <h3 class="text-xl font-extrabold">รายละเอียดสถานที่</h3>
+        <p class="mt-3 min-h-12 leading-7 text-slate-600">ศึกษารายละเอียดและข้อมูลเกี่ยวกับสถานที่ต่าง ๆ ภายในวิทยาลัย</p>
+        <span class="mt-6 inline-flex items-center gap-2 font-bold text-violet-700">
+            ดูรายละเอียด <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+        </span>
+    </button>
+
+    <!-- Contact -->
+    <button onclick="location.href='contact.html'" class="menu-card group rounded-3xl border border-slate-200/70 bg-white p-7 text-left shadow-sm transition duration-300 hover:-translate-y-2 hover:border-coral/30 hover:shadow-lift">
+        <span class="menu-icon mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-rose-100 text-coral">
+            <i data-lucide="phone-call" class="h-7 w-7"></i>
+        </span>
+        <h3 class="text-xl font-extrabold">ข้อมูลติดต่อวิทยาลัย</h3>
+        <p class="mt-3 min-h-12 leading-7 text-slate-600">ที่อยู่ หมายเลขโทรศัพท์ และช่องทางติดตามข่าวสารของวิทยาลัย</p>
+        <span class="mt-6 inline-flex items-center gap-2 font-bold text-coral">
+            ติดต่อเรา <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+        </span>
+    </button>
+
+    <!-- Building -->
+    <button onclick="location.href='building.html'" class="menu-card group rounded-3xl border border-slate-200/70 bg-white p-7 text-left shadow-sm transition duration-300 hover:-translate-y-2 hover:border-orange-300 hover:shadow-lift">
+        <span class="menu-icon mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-orange-100 text-orange-700">
+            <i data-lucide="building-2" class="h-7 w-7"></i>
+        </span>
+        <h3 class="text-xl font-extrabold">ทำเนียบอาคาร</h3>
+        <p class="mt-3 min-h-12 leading-7 text-slate-600">รวบรวมข้อมูลอาคารเรียนและอาคารต่าง ๆ ภายในวิทยาลัย</p>
+        <span class="mt-6 inline-flex items-center gap-2 font-bold text-orange-700">
+            ดูอาคาร <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+        </span>
+    </button>
+
+    <!-- Location -->
+    <button onclick="location.href='map.html'" class="menu-card group rounded-3xl border border-slate-200/70 bg-white p-7 text-left shadow-sm transition duration-300 hover:-translate-y-2 hover:border-sun/30 hover:shadow-lift">
+        <span class="menu-icon mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-amber-100 text-amber-700">
+            <i data-lucide="map-pinned" class="h-7 w-7"></i>
+        </span>
+        <h3 class="text-xl font-extrabold">แผนที่และการเดินทาง</h3>
+        <p class="mt-3 min-h-12 leading-7 text-slate-600">ดูตำแหน่งที่ตั้งและแผนที่ภายในวิทยาลัย พร้อมเปิดเส้นทางได้</p>
+        <span class="mt-6 inline-flex items-center gap-2 font-bold text-amber-700">
+            ดูแผนที่ <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+        </span>
+    </button>
+
+    <!-- Department -->
+    <button onclick="location.href='department.html'" class="menu-card group rounded-3xl border border-slate-200/70 bg-white p-7 text-left shadow-sm transition duration-300 hover:-translate-y-2 hover:border-cyan-300 hover:shadow-lift">
+        <span class="menu-icon mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-cyan-100 text-cyan-700">
+            <i data-lucide="graduation-cap" class="h-7 w-7"></i>
+        </span>
+        <h3 class="text-xl font-extrabold">แผนกวิชา</h3>
+        <p class="mt-3 min-h-12 leading-7 text-slate-600">ค้นหาข้อมูลแผนกวิชาและสาขาที่เปิดสอนภายในวิทยาลัย</p>
+        <span class="mt-6 inline-flex items-center gap-2 font-bold text-cyan-700">
+            ดูแผนกวิชา <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+        </span>
+    </button>
+
+    <!-- Facilities -->
+    <button onclick="location.href='facilities.html'" class="menu-card group rounded-3xl border border-slate-200/70 bg-white p-7 text-left shadow-sm transition duration-300 hover:-translate-y-2 hover:border-pink-300 hover:shadow-lift">
+        <span class="menu-icon mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-pink-100 text-pink-700">
+            <i data-lucide="coffee" class="h-7 w-7"></i>
+        </span>
+        <h3 class="text-xl font-extrabold">สิ่งอำนวยความสะดวก</h3>
+        <p class="mt-3 min-h-12 leading-7 text-slate-600">สำรวจพื้นที่บริการและสิ่งอำนวยความสะดวกสำหรับนักศึกษา</p>
+        <span class="mt-6 inline-flex items-center gap-2 font-bold text-pink-700">
+            ดูเพิ่มเติม <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+        </span>
+    </button>
+
+    <!-- Gallery -->
+    <button onclick="location.href='gallery.html'" class="menu-card group rounded-3xl border border-slate-200/70 bg-white p-7 text-left shadow-sm transition duration-300 hover:-translate-y-2 hover:border-indigo-300 hover:shadow-lift">
+        <span class="menu-icon mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-indigo-100 text-indigo-700">
+            <i data-lucide="images" class="h-7 w-7"></i>
+        </span>
+        <h3 class="text-xl font-extrabold">ภาพกิจกรรมและสถานที่</h3>
+        <p class="mt-3 min-h-12 leading-7 text-slate-600">รับชมภาพบรรยากาศ กิจกรรม และสถานที่ต่าง ๆ ภายในวิทยาลัย</p>
+        <span class="mt-6 inline-flex items-center gap-2 font-bold text-indigo-700">
+            ชมแกลเลอรี <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
+        </span>
+    </button>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <!-- ส่วนที่ 8: ส่วนท้ายเว็บไซต์ -->
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+      <p>© <span id="year"></span> วิทยาลัยเทคนิคนางรอง</p>
+      <p>ออกแบบเพื่อการนำเสนอข้อมูลวิทยาลัย</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript สำหรับเมนูมือถือและปี พ.ศ. -->
+  <script src="js/app.js"></script>
+</body>
+</html>

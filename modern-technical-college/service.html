@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Service | วิทยาลัยเทคนิคนางรอง</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink: '#0A243E',
+        sun: '#F3A712',
+        royal: '#2563EB',
+        skysoft: '#EAF4FC'
+      }
+    }
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="font-sans text-ink antialiased">
+
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-ink text-white shadow-lg">
+    <div class="mx-auto max-w-7xl px-5 py-4 flex items-center justify-between">
+
+        <a href="index.html" class="flex items-center gap-3">
+            <span class="bg-sun text-ink p-3 rounded-xl">
+                <i data-lucide="graduation-cap"></i>
+            </span>
+
+            <div>
+                <h2 class="font-bold">วิทยาลัยเทคนิคนางรอง</h2>
+                <p class="text-xs text-slate-300">Nangrong Technical College</p>
+            </div>
+        </a>
+
+        <a href="index.html"
+           class="rounded-xl bg-white/10 px-4 py-2 hover:bg-sun hover:text-ink transition">
+            <i data-lucide="arrow-left" class="inline w-4 h-4"></i>
+            กลับหน้าแรก
+        </a>
+
+    </div>
+</header>
+
+<!-- Title -->
+<section class="bg-ink text-white px-5 py-16">
+    <div class="max-w-7xl mx-auto">
+
+        <p class="text-sun font-bold uppercase tracking-widest">
+            Our Services
+        </p>
+
+        <h1 class="text-4xl font-extrabold mt-3">
+            หมวดหมู่สถานที่
+        </h1>
+
+        <p class="text-slate-300 mt-4 text-lg">
+            เลือกชมหมวดหมู่สถานที่ต่าง ๆ ภายในวิทยาลัยเทคนิคนางรอง
+        </p>
+
+    </div>
+</section>
+
+<!-- Category -->
+<main class="max-w-7xl mx-auto px-5 py-16">
+
+    <div class="text-center mb-12">
+        <p class="text-royal font-bold uppercase tracking-widest">
+            Categories
+        </p>
+
+        <h2 class="text-3xl font-extrabold mt-2">
+            สำรวจสถานที่ภายในวิทยาลัย
+        </h2>
+
+        <p class="text-slate-500 mt-3">
+            เลือกหมวดหมู่ที่ต้องการเพื่อดูรายละเอียดเพิ่มเติม
+        </p>
+    </div>
+
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+        <!-- อาคารเรียน -->
+        <a href="building.html"
+           class="group overflow-hidden rounded-3xl bg-white shadow-soft border border-slate-200 hover:-translate-y-2 transition">
+
+            <div class="overflow-hidden">
+                <img
+                src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=900&q=85"
+                alt="อาคารเรียน"
+                class="h-64 w-full object-cover group-hover:scale-110 transition duration-500">
+            </div>
+
+            <div class="p-6">
+                <h3 class="text-xl font-extrabold">อาคารเรียน</h3>
+                <p class="mt-2 text-slate-500">
+                    รวมข้อมูลอาคารเรียนภายในวิทยาลัย
+                </p>
+
+                <span class="mt-5 inline-flex items-center gap-2 font-bold text-royal">
+                    ดูเพิ่มเติม
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </span>
+            </div>
+        </a>
+
+        <!-- แผนกวิชา -->
+        <a href="department.html"
+           class="group overflow-hidden rounded-3xl bg-white shadow-soft border border-slate-200 hover:-translate-y-2 transition">
+
+            <div class="overflow-hidden">
+                <img
+                src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=85"
+                alt="แผนกวิชา"
+                class="h-64 w-full object-cover group-hover:scale-110 transition duration-500">
+            </div>
+
+            <div class="p-6">
+                <h3 class="text-xl font-extrabold">แผนกวิชา</h3>
+                <p class="mt-2 text-slate-500">
+                    ข้อมูลแผนกและสาขาวิชาที่เปิดสอน
+                </p>
+
+                <span class="mt-5 inline-flex items-center gap-2 font-bold text-royal">
+                    ดูเพิ่มเติม
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </span>
+            </div>
+        </a>
+
+        <!-- สิ่งอำนวยความสะดวก -->
+        <a href="facilities.html"
+           class="group overflow-hidden rounded-3xl bg-white shadow-soft border border-slate-200 hover:-translate-y-2 transition">
+
+            <div class="overflow-hidden">
+                <img
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85"
+                alt="สิ่งอำนวยความสะดวก"
+                class="h-64 w-full object-cover group-hover:scale-110 transition duration-500">
+            </div>
+
+            <div class="p-6">
+                <h3 class="text-xl font-extrabold">สิ่งอำนวยความสะดวก</h3>
+                <p class="mt-2 text-slate-500">
+                    รวมสถานที่และบริการต่าง ๆ ภายในวิทยาลัย
+                </p>
+
+                <span class="mt-5 inline-flex items-center gap-2 font-bold text-royal">
+                    ดูเพิ่มเติม
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </span>
+            </div>
+        </a>
+
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-5 py-8 text-center text-sm text-slate-500">
+        © 2026 วิทยาลัยเทคนิคนางรอง
+        <p class="mt-1">Nangrong Technical College</p>
+    </div>
+</footer>
+
+<script>
+lucide.createIcons();
+</script>
+
+</body>
+</html>
